@@ -1,0 +1,311 @@
+{
+	"info": {
+		"_postman_id": "056f86ef-903d-4d01-9f6c-9d83998db7c2",
+		"name": "Restful server testing for regions",
+		"description": "This test is for /regions ",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Test Delete",
+			"description": "",
+			"item": [
+				{
+					"name": "Get JWT",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "f5ba5984-536c-461b-8ac9-53369abd1386",
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Response is long enough\", () => ",
+									"    pm.expect(pm.response.text()).to.have.lengthOf.above(40)); ",
+									" ",
+									"pm.test(\"Response has three parts\", () => ",
+									"    pm.expect(pm.response.text().split(\".\")).to.have.lengthOf(3));",
+									"    ",
+									"pm.environment.set(\"token\", responseBody); // for later scripts",
+									""
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "user",
+									"value": "fkereki",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "modernjsbook",
+									"description": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:8443/gettoken",
+							"host": [
+								"localhost"
+							],
+							"port": "8443",
+							"path": [
+								"gettoken"
+							]
+						},
+						"description": "The HTTP `GET` request method is meant to retrieve data from a server. The data\nis identified by a unique URI (Uniform Resource Identifier). \n\nA `GET` request can pass parameters to the server using \"Query String \nParameters\". For example, in the following request,\n\n> http://example.com/hi/there?hand=wave\n\nThe parameter \"hand\" has the value \"wave\".\n\nThis endpoint echoes the HTTP headers, request parameters and the complete\nURI requested."
+					},
+					"response": []
+				},
+				{
+					"name": "Delete non-existing region",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "706fe7f8-7417-48a9-b03d-0677eee4aad9",
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Status code is 404 baby!!\",  () => ",
+									"    pm.response.to.have.status(404));"
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}"
+							}
+						],
+						"body": {},
+						"url": {
+							"raw": "localhost:8443/regions/zz/99",
+							"host": [
+								"localhost"
+							],
+							"port": "8443",
+							"path": [
+								"regions",
+								"zz",
+								"99"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Test Get",
+			"description": "",
+			"item": [
+				{
+					"name": "Get JWT",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "f5ba5984-536c-461b-8ac9-53369abd1386",
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Response is long enough\", () => ",
+									"    pm.expect(pm.response.text()).to.have.lengthOf.above(40)); ",
+									" ",
+									"pm.test(\"Response has three parts\", () => ",
+									"    pm.expect(pm.response.text().split(\".\")).to.have.lengthOf(3));",
+									"    ",
+									"pm.environment.set(\"token\", responseBody); // for later scripts",
+									""
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "user",
+									"value": "fkereki",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "modernjsbook",
+									"description": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:8443/gettoken",
+							"host": [
+								"localhost"
+							],
+							"port": "8443",
+							"path": [
+								"gettoken"
+							]
+						},
+						"description": "The HTTP `GET` request method is meant to retrieve data from a server. The data\nis identified by a unique URI (Uniform Resource Identifier). \n\nA `GET` request can pass parameters to the server using \"Query String \nParameters\". For example, in the following request,\n\n> http://example.com/hi/there?hand=wave\n\nThe parameter \"hand\" has the value \"wave\".\n\nThis endpoint echoes the HTTP headers, request parameters and the complete\nURI requested."
+					},
+					"response": []
+				},
+				{
+					"name": "Get /regions/uy",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "4a0fe82d-a640-42c1-b451-f7e6a5e3705e",
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Answer should be JSON\", () => {",
+									"    pm.response.to.be.success;",
+									"    pm.response.to.have.jsonBody(); ",
+									"});",
+									" ",
+									"pm.test(\"Answer should have at least 19 regions\", () => {",
+									"    const regions = JSON.parse(pm.response.text());",
+									"    pm.expect(regions).to.have.lengthOf.at.least(19);",
+									"});",
+									""
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}"
+							},
+							{
+								"key": "",
+								"value": ""
+							}
+						],
+						"body": {},
+						"url": {
+							"raw": "localhost:8443/regions/uy",
+							"host": [
+								"localhost"
+							],
+							"port": "8443",
+							"path": [
+								"regions",
+								"uy"
+							]
+						},
+						"description": "Attempt getting all regions of UY\n"
+					},
+					"response": []
+				},
+				{
+					"name": "Get /regions/uy/10",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "c8a43643-d266-4e1a-9576-7647a544b796",
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Answer is valid, JSON\", function () {",
+									"    pm.response.to.be.success;",
+									"    pm.response.to.have.jsonBody(); ",
+									"    ",
+									"    const jsonData = pm.response.json();",
+									"    ",
+									"    pm.test(\"Answer has a single region\", ",
+									"        () => pm.expect(jsonData).to.have.lengthOf(1));",
+									"        ",
+									"    pm.test(\"Country code is UY\", ",
+									"        () => pm.expect(jsonData[0].countryCode).to.equal(\"UY\"));",
+									"",
+									"    pm.test(\"Region code is 11\", ",
+									"        () => pm.expect(jsonData[0].regionCode).to.equal(\"11\"));",
+									"",
+									"    pm.test(\"Region name is Paysandu\", ",
+									"        () => pm.expect(jsonData[0].regionName).to.equal(\"Paysandu\"));",
+									"});",
+									""
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}"
+							}
+						],
+						"body": {},
+						"url": {
+							"raw": "localhost:8443/regions/uy/11",
+							"host": [
+								"localhost"
+							],
+							"port": "8443",
+							"path": [
+								"regions",
+								"uy",
+								"11"
+							]
+						},
+						"description": "Attempt getting a single region of UY\n"
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "bd5384f0-4651-4701-a733-e4e2c12aba7a",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "4af046c3-048a-4a41-b070-32481a04d094",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}

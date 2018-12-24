@@ -1,0 +1,13 @@
+2018-05-28T20:04:04.479Z [serv] warn UNKNOWN ROUTE /invented
+2018-05-28T20:04:07.641Z [serv] error GENERAL ERROR res.say_xyzzy is not a function
+TypeError: res.say_xyzzy is not a function
+    at app.get (/home/fkereki/MODERNJS/chapter05/out/morgan_in_winston_server.js:67:9)
+    at Layer.handle [as handle_request] (/home/fkereki/MODERNJS/chapter05/node_modules/express/lib/router/layer.js:95:5)
+    at next (/home/fkereki/MODERNJS/chapter05/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/home/fkereki/MODERNJS/chapter05/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/home/fkereki/MODERNJS/chapter05/node_modules/express/lib/router/layer.js:95:5)
+    at /home/fkereki/MODERNJS/chapter05/node_modules/express/lib/router/index.js:281:22
+    at Function.process_params (/home/fkereki/MODERNJS/chapter05/node_modules/express/lib/router/index.js:335:12)
+    at next (/home/fkereki/MODERNJS/chapter05/node_modules/express/lib/router/index.js:275:10)
+    at logger (/home/fkereki/MODERNJS/chapter05/node_modules/morgan/index.js:144:5)
+    at Layer.handle [as handle_request] (/home/fkereki/MODERNJS/chapter05/node_modules/express/lib/router/layer.js:95:5)

@@ -1,0 +1,107 @@
+{
+    "name": "simpleproject",
+    "version": "1.0.0",
+    "description": "A simple project to show package.json creation",
+    "main": "index.js",
+    "scripts": {
+        "build": "flow-remove-types src/ -d out/",
+        "buildWithMaps": "flow-remove-types src/ -d out/ --pretty --sourcemaps",
+        "start": "npm run build && node out/doroundmath.js",
+        "start-db": "npm run build && node out/dbaccess.js",
+        "nodemon": "nodemon --watch src --delay 1 --exec npm start",
+        "addTypes": "flow-typed install",
+        "update": "npm install && flow-typed install",
+        "flow": "flow",
+        "flow-coverage": "flow-coverage-report",
+        "eslint": "eslint src",
+        "testNoCoverage": "jest out/",
+        "test": "jest out/ --coverage --no-cache",
+        "newman": "newman run postman_collection.json"
+    },
+    "author": "Federico Kereki",
+    "license": "ISC",
+    "babel": {
+        "presets": [
+            "env",
+            "flow"
+        ]
+    },
+    "eslintConfig": {
+        "parser": "babel-eslint",
+        "parserOptions": {
+            "ecmaVersion": 2017,
+            "sourceType": "module"
+        },
+        "env": {
+            "node": true,
+            "es6": true,
+            "jest": true
+        },
+        "extends": [
+            "eslint:recommended",
+            "plugin:flowtype/recommended"
+        ],
+        "plugins": [
+            "babel",
+            "flowtype"
+        ],
+        "rules": {
+            "no-console": "off",
+            "no-var": "error",
+            "prefer-const": "error",
+            "flowtype/no-types-missing-file-annotation": 0
+        }
+    },
+    "eslintIgnore": [
+        "**/out/*.js"
+    ],
+    "flow-coverage-report": {
+        "concurrentFiles": 1,
+        "excludeGlob": [
+            "node_modules/**"
+        ],
+        "includeGlob": [
+            "src/**/*.js"
+        ],
+        "threshold": 90,
+        "type": [
+            "text",
+            "html",
+            "json"
+        ]
+    },
+    "prettier": {
+        "tabWidth": 4,
+        "printWidth": 75
+    },
+    "dependencies": {
+        "axios": "^0.18.0",
+        "cors": "^2.8.4",
+        "dotenv": "^5.0.1",
+        "express": "^4.16.3",
+        "helmet": "^3.13.0",
+        "jsonwebtoken": "^8.3.0",
+        "mariasql": "^0.2.6",
+        "morgan": "^1.9.1",
+        "node-mocks-http": "^1.7.0",
+        "swagger-ui-express": "^3.0.10",
+        "winston": "^3.1.0"
+    },
+    "devDependencies": {
+        "babel-eslint": "^8.2.6",
+        "babel-jest": "^23.6.0",
+        "babel-preset-env": "^1.7.0",
+        "babel-preset-flow": "^6.23.0",
+        "eslint": "^4.19.0",
+        "eslint-config-recommended": "^2.0.0",
+        "eslint-plugin-flowtype": "^2.50.0",
+        "flow-bin": "^0.68.0",
+        "flow-coverage-report": "^0.5.0",
+        "flow-remove-types": "^1.2.3",
+        "flow-typed": "^2.5.1",
+        "jest": "^23.6.0",
+        "newman": "^3.10.0",
+        "nodemon": "^1.18.4",
+        "prettier": "^1.14.2"
+    }
+}

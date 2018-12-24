@@ -1,0 +1,711 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "description": "This is a RESTful API to access world data, including countries, regions, and cities.",
+    "version": "1.0.0",
+    "title": "World Data API"
+  },
+  "host": "127.0.0.1:8443",
+  "schemes": [
+    "http"
+  ],
+  "tags": [
+    {
+      "name": "token",
+      "description": "Get a JWT for authorization"
+    },
+    {
+      "name": "countries",
+      "description": "Access the world countries"
+    },
+    {
+      "name": "regions",
+      "description": "Access the regions of countries"
+    },
+    {
+      "name": "cities",
+      "description": "Access the world cities"
+    }
+  ],
+  "paths": {
+    "/gettoken": {
+      "post": {
+        "tags": [
+          "token"
+        ],
+        "summary": "Get a token to authorize future requests",
+        "consumes": [
+          "application/x-www-form-urlencoded"
+        ],
+        "produces": [
+          "text/plain"
+        ],
+        "parameters": [
+          {
+            "in": "formData",
+            "name": "user",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "formData",
+            "name": "password",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "A valid token to use for other requests"
+          },
+          "401": {
+            "description": "Wrong user/password"
+          }
+        }
+      }
+    },
+    "/regions": {
+      "get": {
+        "tags": [
+          "regions"
+        ],
+        "summary": "Get all regions of all countries",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "header",
+            "name": "Authorization",
+            "required": true,
+            "type": "string",
+            "description": "Authorization Token"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "401": {
+            "description": "No token provided"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "regions"
+        ],
+        "summary": "Add a region to a given country",
+        "consumes": [
+          "application/x-www-form-urlencoded"
+        ],
+        "produces": [
+          "text/plain"
+        ],
+        "parameters": [
+          {
+            "in": "formData",
+            "name": "name",
+            "required": true,
+            "type": "string",
+            "description": "The new region's name."
+          },
+          {
+            "in": "header",
+            "name": "Authorization",
+            "required": true,
+            "type": "string",
+            "description": "Authorization Token"
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "OK, created"
+          },
+          "400": {
+            "description": "Name missing, region not created"
+          },
+          "401": {
+            "description": "No token provided"
+          },
+          "403": {
+            "description": "Country not found, region not created"
+          },
+          "409": {
+            "description": "Other failure, region not created"
+          }
+        }
+      }
+    },
+    "/regions/{country}": {
+      "get": {
+        "tags": [
+          "regions"
+        ],
+        "summary": "Get all regions of a given country",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "country",
+            "in": "path",
+            "description": "Country (id) whose regions are required",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "header",
+            "name": "Authorization",
+            "required": true,
+            "type": "string",
+            "description": "Authorization Token"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "401": {
+            "description": "No token provided"
+          },
+          "404": {
+            "description": "Country not found"
+          }
+        }
+      }
+    },
+    "/regions/{country}/{id}": {
+      "get": {
+        "tags": [
+          "regions"
+        ],
+        "summary": "Get a specific region of a given country",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "country",
+            "in": "path",
+            "description": "Country (id) of the region",
+            "type": "string",
+            "required": true
+          },
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Region (id) that is required",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "header",
+            "name": "Authorization",
+            "required": true,
+            "type": "string",
+            "description": "Authorization Token"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "401": {
+            "description": "No token provided"
+          },
+          "404": {
+            "description": "Country not found"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "regions"
+        ],
+        "summary": "Delete a specific region of a given country",
+        "description": "",
+        "parameters": [
+          {
+            "name": "country",
+            "in": "path",
+            "description": "Country (id) of the region",
+            "type": "string",
+            "required": true
+          },
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Region (id) that is to be deleted",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "header",
+            "name": "Authorization",
+            "required": true,
+            "type": "string",
+            "description": "Authorization Token"
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "OK, region was deleted"
+          },
+          "401": {
+            "description": "No token provided"
+          },
+          "404": {
+            "description": "Region does not exist"
+          },
+          "405": {
+            "description": "Region has cities, cannot be deleted"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "regions"
+        ],
+        "summary": "Update a specific region of a given country",
+        "consumes": [
+          "application/x-www-form-urlencoded"
+        ],
+        "produces": [
+          "text/plain"
+        ],
+        "parameters": [
+          {
+            "name": "country",
+            "in": "path",
+            "description": "Country (id) of the region",
+            "type": "string",
+            "required": true
+          },
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Region (id) that is to be deleted",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "formData",
+            "name": "name",
+            "required": true,
+            "type": "string",
+            "description": "The region's new name."
+          },
+          {
+            "in": "header",
+            "name": "Authorization",
+            "required": true,
+            "type": "string",
+            "description": "Authorization Token"
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "OK, region was updated"
+          },
+          "400": {
+            "description": "Name missing, region not updated"
+          },
+          "401": {
+            "description": "No token provided"
+          },
+          "404": {
+            "description": "Country not found"
+          }
+        }
+      }
+    },
+    "/countries": {
+      "get": {
+        "tags": [
+          "countries"
+        ],
+        "summary": "Get all countries",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "header",
+            "name": "Authorization",
+            "required": true,
+            "type": "string",
+            "description": "Authorization Token"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "401": {
+            "description": "No token provided"
+          }
+        }
+      }
+    },
+    "/countries/{country}": {
+      "get": {
+        "tags": [
+          "countries"
+        ],
+        "summary": "Get a single country",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "country",
+            "in": "path",
+            "description": "Required Country",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "header",
+            "name": "Authorization",
+            "required": true,
+            "type": "string",
+            "description": "Authorization Token"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "401": {
+            "description": "No token provided"
+          },
+          "404": {
+            "description": "Country not found"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "countries"
+        ],
+        "summary": "Delete a specific country",
+        "description": "",
+        "parameters": [
+          {
+            "name": "country",
+            "in": "path",
+            "description": "Country to delete",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "header",
+            "name": "Authorization",
+            "required": true,
+            "type": "string",
+            "description": "Authorization Token"
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "OK, country was deleted"
+          },
+          "401": {
+            "description": "No token provided"
+          },
+          "404": {
+            "description": "Country does not exist"
+          },
+          "405": {
+            "description": "Country has regions, cannot be deleted"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "countries"
+        ],
+        "summary": "Update or create a country",
+        "consumes": [
+          "application/x-www-form-urlencoded"
+        ],
+        "produces": [
+          "text/plain"
+        ],
+        "parameters": [
+          {
+            "name": "country",
+            "in": "path",
+            "description": "Country",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "formData",
+            "name": "name",
+            "required": true,
+            "type": "string",
+            "description": "The region's new name."
+          },
+          {
+            "in": "header",
+            "name": "Authorization",
+            "required": true,
+            "type": "string",
+            "description": "Authorization Token"
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "OK, coutry was updated"
+          },
+          "400": {
+            "description": "Name missing, country not updated"
+          },
+          "401": {
+            "description": "No token provided"
+          }
+        }
+      }
+    },
+    "/cities": {
+      "post": {
+        "tags": [
+          "cities"
+        ],
+        "summary": "Add a city",
+        "consumes": [
+          "application/x-www-form-urlencoded"
+        ],
+        "produces": [
+          "text/plain"
+        ],
+        "parameters": [
+          {
+            "in": "formData",
+            "name": "name",
+            "required": true,
+            "type": "string",
+            "description": "The new city's name."
+          },
+          {
+            "in": "formData",
+            "name": "latitude",
+            "required": true,
+            "type": "number",
+            "description": "The new city's latitude."
+          },
+          {
+            "in": "formData",
+            "name": "longitude",
+            "required": true,
+            "type": "number",
+            "description": "The new city's longitude."
+          },
+          {
+            "in": "formData",
+            "name": "population",
+            "required": true,
+            "type": "number",
+            "description": "The new city's population."
+          },
+          {
+            "in": "formData",
+            "name": "countryCode",
+            "required": true,
+            "type": "string",
+            "description": "The new city's country."
+          },
+          {
+            "in": "formData",
+            "name": "regionCode",
+            "required": true,
+            "type": "string",
+            "description": "The new city's region."
+          },
+          {
+            "in": "header",
+            "name": "Authorization",
+            "required": true,
+            "type": "string",
+            "description": "Authorization Token"
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "OK, created"
+          },
+          "400": {
+            "description": "Name missing, city not created"
+          },
+          "401": {
+            "description": "No token provided"
+          },
+          "403": {
+            "description": "Region not found, city not created"
+          },
+          "409": {
+            "description": "Other failure, city not created"
+          }
+        }
+      }
+    },
+    "/cities/{cityId}": {
+      "get": {
+        "tags": [
+          "cities"
+        ],
+        "summary": "Get a specific city",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "cityId",
+            "in": "path",
+            "description": "Id of the city",
+            "type": "number",
+            "required": true
+          },
+          {
+            "in": "header",
+            "name": "Authorization",
+            "required": true,
+            "type": "string",
+            "description": "Authorization Token"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "401": {
+            "description": "No token provided"
+          },
+          "404": {
+            "description": "City not found"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "cities"
+        ],
+        "summary": "Delete a specific city",
+        "description": "",
+        "parameters": [
+          {
+            "name": "cityId",
+            "in": "path",
+            "description": "Id of the city",
+            "type": "number",
+            "required": true
+          },
+          {
+            "in": "header",
+            "name": "Authorization",
+            "required": true,
+            "type": "string",
+            "description": "Authorization Token"
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "OK, city was deleted"
+          },
+          "401": {
+            "description": "No token provided"
+          },
+          "404": {
+            "description": "City does not exist"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "cities"
+        ],
+        "summary": "Update a specific city",
+        "consumes": [
+          "application/x-www-form-urlencoded"
+        ],
+        "produces": [
+          "text/plain"
+        ],
+        "parameters": [
+          {
+            "name": "cityId",
+            "in": "path",
+            "description": "Id of the city",
+            "type": "number",
+            "required": true
+          },
+          {
+            "in": "formData",
+            "name": "name",
+            "required": true,
+            "type": "string",
+            "description": "The new city's name."
+          },
+          {
+            "in": "formData",
+            "name": "latitude",
+            "required": true,
+            "type": "number",
+            "description": "The new city's latitude."
+          },
+          {
+            "in": "formData",
+            "name": "longitude",
+            "required": true,
+            "type": "number",
+            "description": "The new city's longitude."
+          },
+          {
+            "in": "formData",
+            "name": "population",
+            "required": true,
+            "type": "number",
+            "description": "The new city's population."
+          },
+          {
+            "in": "formData",
+            "name": "countryCode",
+            "required": true,
+            "type": "string",
+            "description": "The new city's country."
+          },
+          {
+            "in": "formData",
+            "name": "regionCode",
+            "required": true,
+            "type": "string",
+            "description": "The new city's region."
+          },
+          {
+            "in": "header",
+            "name": "Authorization",
+            "required": true,
+            "type": "string",
+            "description": "Authorization Token"
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "OK, city was updated"
+          },
+          "400": {
+            "description": "Name missing, city not updated"
+          },
+          "401": {
+            "description": "No token provided"
+          },
+          "404": {
+            "description": "City not found"
+          }
+        }
+      }
+    }
+  }
+}
