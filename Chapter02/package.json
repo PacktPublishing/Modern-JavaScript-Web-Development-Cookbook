@@ -1,0 +1,90 @@
+{
+    "name": "simpleproject",
+    "version": "1.0.0",
+    "description": "A simple project to show package.json creation",
+    "main": "index.js",
+    "scripts": {
+        "build": "babel src -d out",
+        "buildNode": "flow-remove-types src/ -d out/",
+        "addTypes": "flow-typed install",
+        "update": "npm install && flow-typed install",
+        "flow": "flow",
+        "flow-coverage": "flow-coverage-report",
+        "eslint": "eslint src",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "Federico Kereki",
+    "license": "ISC",
+    "babel": {
+        "presets": [
+            "env",
+            "flow"
+        ]
+    },
+    "eslintConfig": {
+        "parserOptions": {
+            "ecmaVersion": 2017,
+            "sourceType": "module"
+        },
+        "parser": "babel-eslint",
+        "env": {
+            "browser": true,
+            "node": true,
+            "es6": true
+        },
+        "extends": [
+            "eslint:recommended",
+            "plugin:flowtype/recommended"
+        ],
+        "plugins": [
+            "babel",
+            "flowtype"
+        ],
+        "rules": {
+            "no-console": "off",
+            "no-var": "error",
+            "prefer-const": "error"
+        }
+    },
+    "eslintIgnore": [
+        "**/out/*.js"
+    ],
+    "flow-coverage-report": {
+        "concurrentFiles": 1,
+        "excludeGlob": [
+            "node_modules/**"
+        ],
+        "includeGlob": [
+            "src/**/*.js"
+        ],
+        "threshold": 90,
+        "type": [
+            "text",
+            "html",
+            "json"
+        ]
+    },
+    "prettier": {
+        "tabWidth": 4,
+        "printWidth": 75
+    },
+    "dependencies": {
+        "axios": "^0.18.0",
+        "fetch": "^1.1.0",
+        "moment": "^2.22.2"
+    },
+    "devDependencies": {
+        "babel-cli": "^6.26.0",
+        "babel-eslint": "^8.2.6",
+        "babel-preset-env": "^1.7.0",
+        "babel-preset-flow": "^6.23.0",
+        "eslint": "^4.19.0",
+        "eslint-config-recommended": "^2.0.0",
+        "eslint-plugin-flowtype": "^2.50.0",
+        "flow-bin": "^0.68.0",
+        "flow-coverage-report": "^0.5.0",
+        "flow-remove-types": "^1.2.3",
+        "flow-typed": "^2.5.1",
+        "prettier": "^1.14.2"
+    }
+}

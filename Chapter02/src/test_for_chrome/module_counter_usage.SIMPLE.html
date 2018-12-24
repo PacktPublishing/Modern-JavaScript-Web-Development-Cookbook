@@ -1,0 +1,20 @@
+<http>
+
+    <head> </head>
+
+    <body>
+        See the console for output.
+
+        <script type="module" src="./module_counter.SIMPLE.js"></script>
+        <script type="module">
+            import myCounter from "./module_counter.SIMPLE.js";
+
+            myCounter.init("Clicks");
+
+            console.log(myCounter.inc()); // 1
+            console.log(myCounter.inc()); // 2
+            console.log(myCounter.inc()); // 3
+            console.log(myCounter.toString()); // "Clicks: 3"
+        </script>
+    </body>
+</http>
