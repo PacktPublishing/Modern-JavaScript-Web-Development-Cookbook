@@ -1,0 +1,59 @@
+{
+    "name": "simpleproject",
+    "version": "1.0.0",
+    "description": "A simple project to show package.json creation",
+    "main": "index.js",
+    "scripts": {
+        "build": "babel src -d out",
+        "buildNode": "flow-remove-types src/ -d out/",
+        "flow": "flow",
+        "eslint": "eslint src",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "Federico Kereki",
+    "license": "ISC",
+    "babel": {
+        "presets": [
+            "env",
+            "flow"
+        ]
+    },
+    "eslintConfig": {
+        "parserOptions": {
+            "ecmaVersion": 2017,
+            "sourceType": "module"
+        },
+        "parser": "babel-eslint",
+        "env": {
+            "browser": true,
+            "node": true
+        },
+        "extends": [
+            "eslint:recommended",
+            "plugin:flowtype/recommended"
+        ],
+        "plugins": [
+            "flowtype"
+        ],
+        "rules": {
+            "no-console": "off"
+        }
+    },
+    "prettier": {
+        "tabWidth": 4,
+        "printWidth": 75
+    },
+    "dependencies": {},
+    "devDependencies": {
+        "babel-cli": "^6.26.0",
+        "babel-eslint": "^8.2.2",
+        "babel-preset-env": "^1.6.1",
+        "babel-preset-flow": "^6.23.0",
+        "eslint": "^4.19.0",
+        "eslint-config-recommended": "^2.0.0",
+        "eslint-plugin-flowtype": "^2.46.1",
+        "flow-bin": "^0.68.0",
+        "flow-remove-types": "^1.2.3",
+        "prettier": "^1.11.1"
+    }
+}
