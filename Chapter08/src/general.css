@@ -1,0 +1,5 @@
+.bordered {
+    border: 1px solid blue;
+    padding: 2px;
+    margin: 4px;
+}
