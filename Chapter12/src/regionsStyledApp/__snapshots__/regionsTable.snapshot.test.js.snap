@@ -1,0 +1,58 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`RegionsTable renders correctly a list 1`] = `
+<RCTScrollView
+  style={
+    Array [
+      undefined,
+      Object {
+        "backgroundColor": "lightgray",
+      },
+    ]
+  }
+>
+  <View>
+    <View>
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+      >
+        Cerro Largo
+      </Text>
+    </View>
+    <View>
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+      >
+        Maldonado
+      </Text>
+    </View>
+    <View>
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+      >
+        Montevideo
+      </Text>
+    </View>
+  </View>
+</RCTScrollView>
+`;
+
+exports[`RegionsTable renders correctly an empty list 1`] = `
+<View
+  style={undefined}
+>
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail"
+  >
+    No regions.
+  </Text>
+</View>
+`;

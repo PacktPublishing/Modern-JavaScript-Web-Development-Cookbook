@@ -1,0 +1,71 @@
+{
+    "name": "chapter12b",
+    "version": "0.1.0",
+    "private": true,
+    "devDependencies": {
+        "@storybook/addon-actions": "^3.4.11",
+        "@storybook/addon-links": "^3.4.11",
+        "@storybook/cli": "^3.4.11",
+        "@storybook/react-native": "^3.4.11",
+        "enzyme": "^3.6.0",
+        "enzyme-adapter-react-16": "^1.5.0",
+        "eslint": "^5.6.0",
+        "eslint-config-recommended": "^3.0.0",
+        "eslint-plugin-babel": "^5.2.0",
+        "eslint-plugin-flowtype": "^2.50.1",
+        "eslint-plugin-react": "^7.11.1",
+        "eslint-plugin-react-native": "^3.3.0",
+        "flow": "^0.2.3",
+        "flow-bin": "^0.81.0",
+        "flow-coverage-report": "^0.6.0",
+        "flow-typed": "^2.5.1",
+        "jest-expo": "~27.0.0",
+        "prettier": "^1.14.3",
+        "react-addons-test-utils": "^15.6.2",
+        "react-devtools": "^3.4.0",
+        "react-native-scripts": "1.14.0",
+        "react-native-storybook-loader": "^1.8.0",
+        "react-test-renderer": "^16.5.2",
+        "reactotron-react-native": "^2.1.0",
+        "reactotron-redux": "^2.1.0",
+        "redux-devtools-extension": "^2.13.5"
+    },
+    "main": "./node_modules/react-native-scripts/build/bin/crna-entry.js",
+    "scripts": {
+        "start": "cp App.standard.js App.js && react-native-scripts start",
+        "start-reactotron": "cp App.reactotron.js App.js && react-native-scripts start",
+        "eject": "react-native-scripts eject",
+        "android": "react-native-scripts android",
+        "ios": "react-native-scripts ios",
+        "test": "jest",
+        "coverage": "jest --coverage --no-cache",
+        "flow": "flow",
+        "addTypes": "flow-typed install",
+        "storybook": "cp App.storybook.js App.js && rnstl && storybook start -p 7007"
+    },
+    "config": {
+        "react-native-storybook-loader": {
+            "searchDir": [
+                "./src"
+            ],
+            "pattern": "**/*.story.js",
+            "outputFile": "./storybook/storyLoader.js"
+        }
+    },
+    "jest": {
+        "preset": "jest-expo"
+    },
+    "dependencies": {
+        "axios": "^0.18.0",
+        "expo": "^27.0.1",
+        "prop-types": "^15.6.2",
+        "react": "^16.5.2",
+        "react-dom": "^16.5.2",
+        "react-native": "~0.55.2",
+        "react-navigation": "^2.16.0",
+        "react-redux": "^5.0.7",
+        "redux-mock-store": "^1.5.3",
+        "redux-thunk": "^2.3.0",
+        "whatwg-fetch": "^2.0.4"
+    }
+}

@@ -1,0 +1,67 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CountrySelect renders correctly a countries dropdown 1`] = `
+<View>
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail"
+  >
+    Country:
+  </Text>
+  <View
+    style={undefined}
+  >
+    <RCTPicker
+      items={
+        Array [
+          Object {
+            "label": "Select a country:",
+            "textColor": undefined,
+            "value": "",
+          },
+          Object {
+            "label": "Argentina",
+            "textColor": undefined,
+            "value": "AR",
+          },
+          Object {
+            "label": "Brazil",
+            "textColor": undefined,
+            "value": "BR",
+          },
+          Object {
+            "label": "Uruguay",
+            "textColor": undefined,
+            "value": "UY",
+          },
+        ]
+      }
+      onChange={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      selectedIndex={0}
+      style={
+        Array [
+          Object {
+            "height": 216,
+          },
+          undefined,
+        ]
+      }
+    />
+  </View>
+</View>
+`;
+
+exports[`CountrySelect renders correctly when loading, with no countries 1`] = `
+<View>
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail"
+  >
+    Loading countries...
+  </Text>
+</View>
+`;
