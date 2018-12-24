@@ -1,0 +1,68 @@
+{
+    "name": "chapter13",
+    "version": "0.1.0",
+    "description": "Regions app for chapter 13",
+    "homepage": "./",
+    "license": "free",
+    "author": "Federico Kereki",
+    "private": true,
+    "devDependencies": {
+        "babel-eslint": "^10.0.1",
+        "electron": "^3.0.2",
+        "electron-builder": "^20.28.4",
+        "electron-devtools-installer": "^2.2.4",
+        "eslint": "^5.6.1",
+        "eslint-config-recommended": "^4.0.0",
+        "eslint-plugin-babel": "^5.2.1",
+        "eslint-plugin-flowtype": "^2.50.3",
+        "eslint-plugin-react": "^7.11.1",
+        "flow": "^0.2.3",
+        "flow-bin": "^0.81.0",
+        "flow-typed": "^2.5.1",
+        "react-app-rewire-eslint": "^0.2.3",
+        "react-app-rewired": "^1.6.2",
+        "react-scripts": "1.1.5",
+        "redux-devtools-extension": "^2.13.5"
+    },
+    "dependencies": {
+        "axios": "^0.18.0",
+        "connected-react-router": "^4.5.0",
+        "node-notifier": "^5.2.1",
+        "react": "^16.5.2",
+        "react-dom": "^16.5.2",
+        "react-loadable": "^5.5.0",
+        "react-redux": "^5.0.7",
+        "react-router-dom": "^4.3.1",
+        "redux": "^4.0.0",
+        "redux-thunk": "^2.3.0"
+    },
+    "main": "electron-start.js",
+    "scripts": {
+        "electron": "electron .",
+        "start": "HOST=localhost react-app-rewired start",
+        "build": "react-app-rewired build",
+        "test": "react-app-rewired test --env=jsdom",
+        "eject": "react-app-rewired eject",
+        "flow": "flow",
+        "addTypes": "flow-typed install",
+        "electron-builder": "electron-builder"
+    },
+    "build": {
+        "appId": "com.electron.chapter13",
+        "compression": "normal",
+        "asar": true,
+        "extends": null,
+        "files": [
+            "electron-start.js",
+            "build/**/*",
+            "node_modules/**/*",
+            "src/regionsApp/r_icon.png"
+        ],
+        "linux": {
+            "target": "zip"
+        },
+        "win": {
+            "target": "portable"
+        }
+    }
+}
