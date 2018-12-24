@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`RegionsTable renders correctly a list 1`] = `
+<div
+  className="bordered"
+>
+  <div>
+    Cerro Largo
+  </div>
+  <div>
+    Maldonado
+  </div>
+  <div>
+    Montevideo
+  </div>
+</div>
+`;
+
+exports[`RegionsTable renders correctly an empty list 1`] = `
+<div
+  className="bordered"
+>
+  No regions.
+</div>
+`;

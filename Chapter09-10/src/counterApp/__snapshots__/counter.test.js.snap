@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`clicksDisplay renders correctly 1`] = `
+<div>
+  Value: 
+  9
+  <br />
+  <button
+    onClick={[Function]}
+  >
+    Add 1
+  </button>
+  <button
+    onClick={[Function]}
+  >
+    Subtract 2
+  </button>
+  <button
+    onClick={[Function]}
+  >
+    Reset
+  </button>
+</div>
+`;

@@ -1,0 +1,8 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`clicksDisplay renders correctly 1`] = `
+<div>
+  Clicks so far: 
+  22
+</div>
+`;

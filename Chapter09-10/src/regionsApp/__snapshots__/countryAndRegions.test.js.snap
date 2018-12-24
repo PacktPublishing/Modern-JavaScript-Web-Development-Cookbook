@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App for Regions and Countries renders correctly 1`] = `
+<div>
+  <div>
+    Select:
+    <CountrySelect
+      getCountries={[Function]}
+      list={Array []}
+      loading={true}
+      onSelect={[Function]}
+    />
+  </div>
+  <div>
+    Display: 
+    <RegionsTable
+      list={Array []}
+    />
+  </div>
+</div>
+`;

@@ -1,0 +1,42 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CountrySelect renders correctly a countries dropdown 1`] = `
+<div
+  className="bordered"
+>
+  Country: 
+  <select
+    name="selectCountry"
+    onChange={[Function]}
+  >
+    <option
+      value=""
+    >
+      Select a country:
+    </option>
+    <option
+      value="AR"
+    >
+      Argentina
+    </option>
+    <option
+      value="BR"
+    >
+      Brazil
+    </option>
+    <option
+      value="UY"
+    >
+      Uruguay
+    </option>
+  </select>
+</div>
+`;
+
+exports[`CountrySelect renders correctly when loading, with no countries 1`] = `
+<div
+  className="bordered"
+>
+  Loading countries...
+</div>
+`;
