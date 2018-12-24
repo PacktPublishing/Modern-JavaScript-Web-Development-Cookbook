@@ -1,0 +1,29 @@
+.normalButton, .alertButton {
+  display: inline-block;
+  text-decoration: none;
+  padding: 5px 10px;
+  border-radius: 3px; }
+
+/*
+    A simple button for normal situations
+*/
+.normalButton {
+  background-color: green; }
+  .normalButton:hover {
+    background-color: #000100;
+    transition: all 0.5s ease; }
+  .normalButton span {
+    color: yellow;
+    font-weight: bold; }
+
+/*
+    An alert button for warnings or errors
+*/
+.alertButton {
+  background-color: red; }
+  .alertButton:hover {
+    background-color: maroon;
+    transition: all 0.5s ease; }
+  .alertButton span {
+    color: white;
+    font-weight: bold; }

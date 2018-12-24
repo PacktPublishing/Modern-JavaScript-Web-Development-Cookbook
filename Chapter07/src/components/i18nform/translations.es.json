@@ -1,0 +1,15 @@
+{
+    "details": "Detalles",
+    "number": "¿Cuántas cosas?",
+    "color": "Color de la cosa",
+    "send it before": "Enviar antes de",
+    "please enter details": "Por favor, ingrese detalles para su cosa:",
+    "summary": "Su única cosa llegará antes de la fecha {{date, AS_DATE}}",
+    "summary_plural":
+        "Sus {{count}} cosas llegarán antes del {{date, AS_DATE}}",
+    "colors": {
+        "none": "Ninguno",
+        "steel": "Acero",
+        "sand": "Arena"
+    }
+}

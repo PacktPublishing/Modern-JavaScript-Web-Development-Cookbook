@@ -1,0 +1,12 @@
+@mixin darkenBackground($color) {
+    background-color: $color;
+    &:hover {
+        background-color: darken($color, 25%);
+        transition: all 0.5s ease;
+    }
+}
+
+@mixin coloredBoldText($color) {
+    color: $color;
+    font-weight: bold;
+}

@@ -1,0 +1,33 @@
+@import "_constants.scss";
+@import "_mixins.scss";
+
+%baseButton {
+    display: inline-block;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 3px;
+}
+
+/*
+    A simple button for normal situations
+*/
+.normalButton {
+    @extend %baseButton;
+    @include darkenBackground($normalColor);
+
+    span {
+        @include coloredBoldText($normalText);
+    }
+}
+
+/*
+    An alert button for warnings or errors
+*/
+.alertButton {
+    @extend %baseButton;
+    @include darkenBackground($alertColor);
+
+    span {
+        @include coloredBoldText($alertText);
+    }
+}

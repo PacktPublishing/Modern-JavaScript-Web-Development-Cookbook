@@ -1,0 +1,15 @@
+{
+    "details": "Details",
+    "number": "How many things?",
+    "color": "Thing Color",
+    "send it before": "Send the thing before",
+    "please enter details": "Please, enter details for your thing:",
+    "summary": "Your only thing will be there before {{date, AS_DATE}}",
+    "summary_plural":
+        "Your {{count}} things will be there before {{date, AS_DATE}}",
+    "colors": {
+        "none": "None",
+        "steel": "Steel",
+        "sand": "Sand"
+    }
+}
