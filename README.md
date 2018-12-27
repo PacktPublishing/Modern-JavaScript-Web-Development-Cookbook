@@ -69,9 +69,9 @@ Click on the following link to see the Code in Action:
 [Placeholder link](www.youtube.com/URL)
 
 ### Related products <Other books you may enjoy>
-* Linux: Powerful Server Administration [[Packt]](https://www.packtpub.com/networking-and-servers/linux-powerful-server-administration?utm_source=github&utm_medium=repository&utm_campaign=9781788293778) [[Amazon]](https://www.amazon.com/dp/1788293770)
+* Building Enterprise JavaScript Applications [[Packt]](https://www.packtpub.com/web-development/building-enterprise-javascript-applications?utm_source=github&utm_medium=repository&utm_campaign=1788477324) [[Amazon]](https://www.amazon.com/dp/1788477324)
 
-* Linux Device Drivers Development [[Packt]](https://www.packtpub.com/networking-and-servers/linux-device-drivers-development?utm_source=github&utm_medium=repository&utm_campaign=9781785280009) [[Amazon]](https://www.amazon.com/dp/1788293770)
+* Learn Blockchain Programming with JavaScript [[Packt]](https://www.packtpub.com/web-development/learn-blockchain-programming-javascript?utm_source=github&utm_medium=repository&utm_campaign=1789618827) [[Amazon]](https://www.amazon.com/dp/1789618827)
 
 ## Get to Know the Author(s)
 **Author Name**
