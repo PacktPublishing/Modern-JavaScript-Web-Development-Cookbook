@@ -42,7 +42,7 @@ With the following software and hardware list you can run all code files present
 
 ### Software and Hardware List
 
-| Chapter  | Software required                   | OS required                        |
+| Chapter  | Software required                   | Hardware required                        |
 | -------- | ------------------------------------| -----------------------------------|
 | 1        | Git                     | Windows, Mac OS X, and Linux (Any) |
 | 1-13        | Node (and npm)            | Windows, Mac OS X, and Linux (Any) |
