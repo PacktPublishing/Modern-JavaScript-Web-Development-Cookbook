@@ -29,10 +29,10 @@ All of the code is organized into folders. For example, Chapter02.
 
 The code will look like the following:
 ```
-if (test expression)
-{
-  Statement upon condition is true
-}
+// Source file: src/roundmath.js
+/* @flow */
+"use strict";
+// continues..
 ```
 
 **Following is what you need for this book:**
