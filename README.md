@@ -2,9 +2,9 @@
 
 <a href="Packt UTM URL of the Book"><img src="Cover Image URL of the Book" alt="Book Name" height="256px" align="right"></a>
 
-This is the code repository for [Book Name](Packt UTM URL of the Book), published by Packt.
+This is the code repository for [Mastering JavaScript Functional Programming](Packt UTM URL of the Book), published by Packt.
 
-**Subtitle from EPIC**
+**Easy solutions to common and everyday JavaScript development problems**
 
 ## What is this book about?
 JavaScript has evolved into a language that you can use on any platform. Modern JavaScript Web Development Cookbook is a perfect blend of solutions for traditional JavaScript development and modern areas that developers have lately been exploring with JavaScript. This comprehensive guide teaches you how to work with JavaScript on servers, browsers, mobile phones and desktops.
