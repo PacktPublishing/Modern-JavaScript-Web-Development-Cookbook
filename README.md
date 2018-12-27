@@ -7,14 +7,16 @@ This is the code repository for [Book Name](Packt UTM URL of the Book), publishe
 **Subtitle from EPIC**
 
 ## What is this book about?
-First Paragraph from the Long Description
+JavaScript has evolved into a language that you can use on any platform. Modern JavaScript Web Development Cookbook is a perfect blend of solutions for traditional JavaScript development and modern areas that developers have lately been exploring with JavaScript. This comprehensive guide teaches you how to work with JavaScript on servers, browsers, mobile phones and desktops.
+You will start by exploring the new features of ES8. You will then move on to learning the use of ES8 on servers (with Node.js), with the objective of producing services and microservices and dealing with authentication and CORS. Once you get accustomed to ES8, you will learn to apply it to browsers using frameworks, such as React and Redux, which interact through Ajax with services. You will then understand the use of a modern framework to develop the UI. In addition to this, development for mobile devices with React Native will walk you through the benefits of creating native apps, both for Android and iOS.
+Finally, you’ll be able to apply your new-found knowledge of server-side and client-side tools to develop applications with Electron.
 
 This book covers the following exciting features: <First 5 What you'll learn points>
-* Learn how to manage users, groups, and permissions
-* Encrypt and decrypt disks with Linux Unified Key Setup /Luks
-* Setup SSH for remote access, and connect it to other nodes
-* Understand how to add, remove, and search for packages
-* Use NFS and Samba to share directories with other users
+* Use the latest features of ES8 and learn new ways to code with JavaScript
+* Develop server-side services and microservices with Node.js
+* Learn to do unit testing and to debug your code
+* Build client-side web applications using React and Redux
+* Create native mobile applications for Android and iOS with React Native
 
 If you feel this book is for you, get your [copy](https://www.amazon.com/dp/10DigitISBN) today!
 
@@ -34,7 +36,7 @@ if (test expression)
 ```
 
 **Following is what you need for this book:**
-Copy and paste the Audience section from the EPIC.
+This book is for developers who want to explore the latest JavaScript features, frameworks, and tools for building complete mobile, desktop and web apps, including server and client-side code. You are expected to have working knowledge of JavaScript to get the most out of this book.
 
 With the following software and hardware list you can run all code files present in the book (Chapter 1-15).
 
@@ -42,21 +44,20 @@ With the following software and hardware list you can run all code files present
 
 | Chapter  | Software required                   | OS required                        |
 | -------- | ------------------------------------| -----------------------------------|
-| 1        | R version 3.3.0                     | Windows, Mac OS X, and Linux (Any) |
-| 2        | Rstudio Desktop 0.99.903            | Windows, Mac OS X, and Linux (Any) |
-| 3        | Rstudio Desktop 0.99.903            | Windows, Mac OS X, and Linux (Any) |
-| 4        | Rstudio Desktop 0.99.903            | Windows, Mac OS X, and Linux (Any) |
-| 5        | Rstudio Desktop 0.99.903            | Windows, Mac OS X, and Linux (Any) |
-| 6        | Rstudio Desktop 0.99.903            | Windows, Mac OS X, and Linux (Any) |
-| 7        | Rstudio Desktop 0.99.903            | Windows, Mac OS X, and Linux (Any) |
-| 8        | Rstudio Desktop 0.99.903            | Windows, Mac OS X, and Linux (Any) |
-| 9        | Rstudio Desktop 0.99.903            | Windows, Mac OS X, and Linux (Any) |
-| 10        | Rstudio Desktop 0.99.903            | Windows, Mac OS X, and Linux (Any) |
-| 11        | Rstudio Desktop 0.99.903            | Windows, Mac OS X, and Linux (Any) |
-| 12        | Rstudio Desktop 0.99.903            | Windows, Mac OS X, and Linux (Any) |
-| 13        | Rstudio Desktop 0.99.903            | Windows, Mac OS X, and Linux (Any) |
-| 14        | Rstudio Desktop 0.99.903            | Windows, Mac OS X, and Linux (Any) |
-| 15        | Rstudio Desktop 0.99.903            | Windows, Mac OS X, and Linux (Any) |
+| 1        | Git                     | Windows, Mac OS X, and Linux (Any) |
+| 1-13        | Node (and npm)            | Windows, Mac OS X, and Linux (Any) |
+| 1-13        | Flow            | Windows, Mac OS X, and Linux (Any) |
+| 1-13        | Prettier            | Windows, Mac OS X, and Linux (Any) |
+| 1-13        | ESLint            | Windows, Mac OS X, and Linux (Any) |
+| 4-5        | MariaDB (MySQL)            | Windows, Mac OS X, and Linux (Any) |
+| 5        | Winston, Morgan, Postman,Swagger            | Windows, Mac OS X, and Linux (Any) |
+| 5, 10        | Jest            | Windows, Mac OS X, and Linux (Any) |
+| 6-10        | React            | Windows, Mac OS X, and Linux (Any) |
+| 6, 10        | StoryBook            | Windows, Mac OS X, and Linux (Any) |
+| 8-10        | Redux            | Windows, Mac OS X, and Linux (Any) |
+| 10, 12        | Enzyme            | Windows, Mac OS X, and Linux (Any) |
+| 11-12        | React Native            | Windows, Mac OS X, and Linux (Any) |
+| 13        | Electron            | Windows, Mac OS X, and Linux (Any) |
 
 
 We also provide a PDF file that has color images of the screenshots/diagrams used in this book. [Click here to download it](Graphics Bundle Link).
