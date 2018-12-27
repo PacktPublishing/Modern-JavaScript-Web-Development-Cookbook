@@ -74,16 +74,14 @@ Click on the following link to see the Code in Action:
 * Learn Blockchain Programming with JavaScript [[Packt]](https://www.packtpub.com/web-development/learn-blockchain-programming-javascript?utm_source=github&utm_medium=repository&utm_campaign=1789618827) [[Amazon]](https://www.amazon.com/dp/1789618827)
 
 ## Get to Know the Author(s)
-**Author Name**
-Bio
+**Federico Kereki**
+Federico Kereki is a Uruguayan systems engineer, with a master's degree in education, and over 30 years' experience as a consultant, system developer, university professor, and writer. He is currently a subject matter expert at Globant, and he has taught CS courses at Universidad de la República, Universidad ORT Uruguay, and Universidad de la Empresa.
 
-**Author Name**
-Bio
+He has written for the Linux Journal and the LinuxPro Magazine in the USA, Linux+ and Mundo Linux in Europe, and websites such as Linux [dot] com and IBM DeveloperWorks. He has also written booklets on computer security, and two books—Essential GWT, and Mastering JavaScript Functional Programming.
 
 
 ## Other books by the authors
-* [Mastering Linux Network Administration](https://www.packtpub.com/networking-and-servers/mastering-linux-network-administration?utm_source=github&utm_medium=repository&utm_campaign=9781784399597)
-* [Linux Mint Essentials](https://www.packtpub.com/networking-and-servers/linux-mint-essentials?utm_source=github&utm_medium=repository&utm_campaign=9781782168157)
+* [Mastering JavaScript Functional Programming](https://www.packtpub.com/web-development/mastering-javascript-functional-programming?utm_source=github&utm_medium=repository&utm_campaign=9781787287440)
 
 ### Suggestions and Feedback
 [Click here](https://docs.google.com/forms/d/e/1FAIpQLSdy7dATC6QmEL81FIUuymZ0Wy9vH1jHkvpY57OiMeKGqib_Ow/viewform) if you have any feedback or suggestions.
