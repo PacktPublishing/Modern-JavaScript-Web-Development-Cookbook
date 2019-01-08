@@ -38,7 +38,7 @@ The code will look like the following:
 **Following is what you need for this book:**
 This book is for developers who want to explore the latest JavaScript features, frameworks, and tools for building complete mobile, desktop and web apps, including server and client-side code. You are expected to have working knowledge of JavaScript to get the most out of this book.
 
-With the following software and hardware list you can run all code files present in the book (Chapter 1-15).
+With the following software and hardware list you can run all code files present in the book (Chapter 1-13).
 
 ### Software and Hardware List
 
