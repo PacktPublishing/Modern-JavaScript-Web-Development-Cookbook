@@ -1,8 +1,8 @@
-# Modern-JavaScript-Web-Development-Cookbook
+# Modern JavaScript Web Development Cookbook
 
 <a href="https://www.packtpub.com/web-development/modern-javascript-web-development-cookbook?utm_source=github&utm_medium=repository&utm_campaign=9781788992749"><img src="https://d255esdrn735hr.cloudfront.net/sites/default/files/imagecache/ppv4_main_book_cover/B09958.png" alt="Modern JavaScript Web Development Cookbook" height="256px" align="right"></a>
 
-This is the code repository for [Mastering JavaScript Functional Programming](Packt UTM URL of the Book), published by Packt.
+This is the code repository for [Mastering JavaScript Functional Programming](https://www.packtpub.com/web-development/modern-javascript-web-development-cookbook?utm_source=github&utm_medium=repository&utm_campaign=9781788992749), published by Packt.
 
 **Easy solutions to common and everyday JavaScript development problems**
 
