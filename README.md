@@ -62,16 +62,11 @@ With the following software and hardware list you can run all code files present
 
 We also provide a PDF file that has color images of the screenshots/diagrams used in this book. [https://www.packtpub.com/sites/default/files/downloads/9781788992749_ColorImages.pdf].
 
-## Code in Action
-
-Click on the following link to see the Code in Action:
-
-[Placeholder link](www.youtube.com/URL)
 
 ### Related products <Other books you may enjoy>
-* Building Enterprise JavaScript Applications [[Packt]](https://www.packtpub.com/web-development/building-enterprise-javascript-applications?utm_source=github&utm_medium=repository&utm_campaign=1788477324) [[Amazon]](https://www.amazon.com/dp/1788477324)
+* Building Enterprise JavaScript Applications [[Packt]](https://www.packtpub.com/web-development/building-enterprise-javascript-applications?utm_source=github&utm_medium=repository&utm_campaign=9781788477321) [[Amazon]](https://www.amazon.com/dp/1788477324)
 
-* Learn Blockchain Programming with JavaScript [[Packt]](https://www.packtpub.com/web-development/learn-blockchain-programming-javascript?utm_source=github&utm_medium=repository&utm_campaign=1789618827) [[Amazon]](https://www.amazon.com/dp/1789618827)
+* Learn Blockchain Programming with JavaScript [[Packt]](https://www.packtpub.com/web-development/learn-blockchain-programming-javascript?utm_source=github&utm_medium=repository&utm_campaign=9781789618822) [[Amazon]](https://www.amazon.com/dp/1789618827)
 
 ## Get to Know the Author(s)
 **Federico Kereki**
